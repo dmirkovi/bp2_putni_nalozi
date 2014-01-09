@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="putni_naloziModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="putni_naloziEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="izvjestaj_racuni" EntityType="putni_naloziModel.izvjestaj_racuni" />
+    <EntitySet Name="izvjestaji_kretanja_vozila" EntityType="putni_naloziModel.izvjestaji_kretanja_vozila" />
+    <EntitySet Name="nalozi" EntityType="putni_naloziModel.nalozi" />
+    <EntitySet Name="nalozi_mjesta" EntityType="putni_naloziModel.nalozi_mjesta" />
+    <EntitySet Name="putni_izvjestaji" EntityType="putni_naloziModel.putni_izvjestaji" />
+    <EntitySet Name="vozila" EntityType="putni_naloziModel.vozila" />
+    <EntitySet Name="zaposlenici" EntityType="putni_naloziModel.zaposlenici" />
+    <AssociationSet Name="Ref_izvjestaj_racuni_to_putni_izvjestaji" Association="putni_naloziModel.Ref_izvjestaj_racuni_to_putni_izvjestaji">
+      <End Role="putni_izvjestaji" EntitySet="putni_izvjestaji" />
+      <End Role="izvjestaj_racuni" EntitySet="izvjestaj_racuni" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_izvjestaji_kretanja_vozila_to_putni_izvjestaji" Association="putni_naloziModel.Ref_izvjestaji_kretanja_vozila_to_putni_izvjestaji">
+      <End Role="putni_izvjestaji" EntitySet="putni_izvjestaji" />
+      <End Role="izvjestaji_kretanja_vozila" EntitySet="izvjestaji_kretanja_vozila" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_nalozi_mjesta_to_nalozi" Association="putni_naloziModel.Ref_nalozi_mjesta_to_nalozi">
+      <End Role="nalozi" EntitySet="nalozi" />
+      <End Role="nalozi_mjesta" EntitySet="nalozi_mjesta" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_nalozi_to_vozila" Association="putni_naloziModel.Ref_nalozi_to_vozila">
+      <End Role="vozila" EntitySet="vozila" />
+      <End Role="nalozi" EntitySet="nalozi" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_nalozi_to_zaposlenici_1" Association="putni_naloziModel.Ref_nalozi_to_zaposlenici_1">
+      <End Role="zaposlenici" EntitySet="zaposlenici" />
+      <End Role="nalozi" EntitySet="nalozi" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_nalozi_to_zaposlenici_2" Association="putni_naloziModel.Ref_nalozi_to_zaposlenici_2">
+      <End Role="zaposlenici" EntitySet="zaposlenici" />
+      <End Role="nalozi" EntitySet="nalozi" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_nalozi_to_zaposlenici_3" Association="putni_naloziModel.Ref_nalozi_to_zaposlenici_3">
+      <End Role="zaposlenici" EntitySet="zaposlenici" />
+      <End Role="nalozi" EntitySet="nalozi" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_putni_izvjestaji_to_nalozi" Association="putni_naloziModel.Ref_putni_izvjestaji_to_nalozi">
+      <End Role="nalozi" EntitySet="nalozi" />
+      <End Role="putni_izvjestaji" EntitySet="putni_izvjestaji" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_putni_izvjestaji_to_zaposlenici" Association="putni_naloziModel.Ref_putni_izvjestaji_to_zaposlenici">
+      <End Role="zaposlenici" EntitySet="zaposlenici" />
+      <End Role="putni_izvjestaji" EntitySet="putni_izvjestaji" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_vozila_to_zaposlenici" Association="putni_naloziModel.Ref_vozila_to_zaposlenici">
+      <End Role="zaposlenici" EntitySet="zaposlenici" />
+      <End Role="vozila" EntitySet="vozila" />
+    </AssociationSet>
+    <AssociationSet Name="Ref_zaposlenici_to_zaposlenici" Association="putni_naloziModel.Ref_zaposlenici_to_zaposlenici">
+      <End Role="zaposlenici" EntitySet="zaposlenici" />
+      <End Role="zaposlenici1" EntitySet="zaposlenici" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="izvjestaj_racuni">
+    <Key>
+      <PropertyRef Name="izvjestaj_racun_id" />
+    </Key>
+    <Property Name="izvjestaj_racun_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="putni_izvjestaj_id" Type="Int32" Nullable="false" />
+    <Property Name="tip_racuna" Type="Int32" Nullable="false" />
+    <Property Name="datum_vrijeme" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="racun_izdao" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="broj_racuna" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="iznos" Type="Double" Nullable="false" />
+    <NavigationProperty Name="putni_izvjestaji" Relationship="putni_naloziModel.Ref_izvjestaj_racuni_to_putni_izvjestaji" FromRole="izvjestaj_racuni" ToRole="putni_izvjestaji" />
+  </EntityType>
+  <EntityType Name="izvjestaji_kretanja_vozila">
+    <Key>
+      <PropertyRef Name="izvjestaj_kretanja_vozila_id" />
+    </Key>
+    <Property Name="izvjestaj_kretanja_vozila_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="putni_izvjestaj_id" Type="Int32" Nullable="false" />
+    <Property Name="stanje_brojila" Type="Int32" Nullable="false" />
+    <Property Name="mjesto" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="putni_izvjestaji" Relationship="putni_naloziModel.Ref_izvjestaji_kretanja_vozila_to_putni_izvjestaji" FromRole="izvjestaji_kretanja_vozila" ToRole="putni_izvjestaji" />
+  </EntityType>
+  <EntityType Name="nalozi">
+    <Key>
+      <PropertyRef Name="nalog_id" />
+    </Key>
+    <Property Name="nalog_id" Type="Int32" Nullable="false" />
+    <Property Name="zaposlenik_id" Type="Int32" Nullable="false" />
+    <Property Name="vozilo_id" Type="Int32" Nullable="false" />
+    <Property Name="vrijeme_polaska" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="vrijeme_dolaska" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="svrha" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="trosak_puta" Type="Double" Nullable="false" />
+    <Property Name="nalog_kreirao" Type="Int32" Nullable="false" />
+    <Property Name="datum_kreiranja" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dat_zad_izmjene" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="zap_zad_izmjene" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="nalozi_mjesta" Relationship="putni_naloziModel.Ref_nalozi_mjesta_to_nalozi" FromRole="nalozi" ToRole="nalozi_mjesta" />
+    <NavigationProperty Name="vozila" Relationship="putni_naloziModel.Ref_nalozi_to_vozila" FromRole="nalozi" ToRole="vozila" />
+    <NavigationProperty Name="zaposlenici" Relationship="putni_naloziModel.Ref_nalozi_to_zaposlenici_1" FromRole="nalozi" ToRole="zaposlenici" />
+    <NavigationProperty Name="zaposlenici1" Relationship="putni_naloziModel.Ref_nalozi_to_zaposlenici_2" FromRole="nalozi" ToRole="zaposlenici" />
+    <NavigationProperty Name="zaposlenici2" Relationship="putni_naloziModel.Ref_nalozi_to_zaposlenici_3" FromRole="nalozi" ToRole="zaposlenici" />
+    <NavigationProperty Name="putni_izvjestaji" Relationship="putni_naloziModel.Ref_putni_izvjestaji_to_nalozi" FromRole="nalozi" ToRole="putni_izvjestaji" />
+  </EntityType>
+  <EntityType Name="nalozi_mjesta">
+    <Key>
+      <PropertyRef Name="nalog_mjesta_id" />
+    </Key>
+    <Property Name="nalog_mjesta_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nalog_id" Type="Int32" />
+    <Property Name="naziv_mjesta" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="nalozi" Relationship="putni_naloziModel.Ref_nalozi_mjesta_to_nalozi" FromRole="nalozi_mjesta" ToRole="nalozi" />
+  </EntityType>
+  <EntityType Name="putni_izvjestaji">
+    <Key>
+      <PropertyRef Name="putni_izvjestaj_id" />
+    </Key>
+    <Property Name="putni_izvjestaj_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nalog_id" Type="Int32" Nullable="false" />
+    <Property Name="vrijeme_polaska" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="vrijeme_dolaska" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="duljina_puta" Type="Double" Nullable="false" />
+    <Property Name="izvjestaj_kreirao" Type="Int32" Nullable="false" />
+    <Property Name="datum_kreiranja" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dat_zad_izmjene" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="zap_zad_izmjene" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="izvjestaj_racuni" Relationship="putni_naloziModel.Ref_izvjestaj_racuni_to_putni_izvjestaji" FromRole="putni_izvjestaji" ToRole="izvjestaj_racuni" />
+    <NavigationProperty Name="izvjestaji_kretanja_vozila" Relationship="putni_naloziModel.Ref_izvjestaji_kretanja_vozila_to_putni_izvjestaji" FromRole="putni_izvjestaji" ToRole="izvjestaji_kretanja_vozila" />
+    <NavigationProperty Name="nalozi" Relationship="putni_naloziModel.Ref_putni_izvjestaji_to_nalozi" FromRole="putni_izvjestaji" ToRole="nalozi" />
+    <NavigationProperty Name="zaposlenici" Relationship="putni_naloziModel.Ref_putni_izvjestaji_to_zaposlenici" FromRole="putni_izvjestaji" ToRole="zaposlenici" />
+  </EntityType>
+  <EntityType Name="vozila">
+    <Key>
+      <PropertyRef Name="vozilo_id" />
+    </Key>
+    <Property Name="vozilo_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="marka" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="broj_sasije" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="kategorija" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="nosivost" Type="Double" Nullable="false" />
+    <Property Name="broj_sjedala" Type="Int32" Nullable="false" />
+    <Property Name="reg_oznaka" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="datum_reg" Type="Int32" Nullable="false" />
+    <Property Name="dat_zad_izmjene" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="zap_zad_izmjene" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="nalozi" Relationship="putni_naloziModel.Ref_nalozi_to_vozila" FromRole="vozila" ToRole="nalozi" />
+    <NavigationProperty Name="zaposlenici" Relationship="putni_naloziModel.Ref_vozila_to_zaposlenici" FromRole="vozila" ToRole="zaposlenici" />
+  </EntityType>
+  <EntityType Name="zaposlenici">
+    <Key>
+      <PropertyRef Name="zaposlenik_id" />
+    </Key>
+    <Property Name="zaposlenik_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="prezime" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ime" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="kat_a" Type="Int32" Nullable="false" />
+    <Property Name="kat_b" Type="Int32" Nullable="false" />
+    <Property Name="kat_c" Type="Int32" Nullable="false" />
+    <Property Name="kat_d" Type="Int32" Nullable="false" />
+    <Property Name="kat_e" Type="Int32" Nullable="false" />
+    <Property Name="dat_zad_izmjene" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="zap_zad_izmjene" Type="Int32" />
+    <NavigationProperty Name="nalozi" Relationship="putni_naloziModel.Ref_nalozi_to_zaposlenici_1" FromRole="zaposlenici" ToRole="nalozi" />
+    <NavigationProperty Name="nalozi1" Relationship="putni_naloziModel.Ref_nalozi_to_zaposlenici_2" FromRole="zaposlenici" ToRole="nalozi" />
+    <NavigationProperty Name="nalozi2" Relationship="putni_naloziModel.Ref_nalozi_to_zaposlenici_3" FromRole="zaposlenici" ToRole="nalozi" />
+    <NavigationProperty Name="putni_izvjestaji" Relationship="putni_naloziModel.Ref_putni_izvjestaji_to_zaposlenici" FromRole="zaposlenici" ToRole="putni_izvjestaji" />
+    <NavigationProperty Name="vozila" Relationship="putni_naloziModel.Ref_vozila_to_zaposlenici" FromRole="zaposlenici" ToRole="vozila" />
+    <NavigationProperty Name="zaposlenici1" Relationship="putni_naloziModel.Ref_zaposlenici_to_zaposlenici" FromRole="zaposlenici" ToRole="zaposlenici1" />
+    <NavigationProperty Name="zaposlenici2" Relationship="putni_naloziModel.Ref_zaposlenici_to_zaposlenici" FromRole="zaposlenici1" ToRole="zaposlenici" />
+  </EntityType>
+  <Association Name="Ref_izvjestaj_racuni_to_putni_izvjestaji">
+    <End Role="putni_izvjestaji" Type="putni_naloziModel.putni_izvjestaji" Multiplicity="1" />
+    <End Role="izvjestaj_racuni" Type="putni_naloziModel.izvjestaj_racuni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="putni_izvjestaji">
+        <PropertyRef Name="putni_izvjestaj_id" />
+      </Principal>
+      <Dependent Role="izvjestaj_racuni">
+        <PropertyRef Name="putni_izvjestaj_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_izvjestaji_kretanja_vozila_to_putni_izvjestaji">
+    <End Role="putni_izvjestaji" Type="putni_naloziModel.putni_izvjestaji" Multiplicity="1" />
+    <End Role="izvjestaji_kretanja_vozila" Type="putni_naloziModel.izvjestaji_kretanja_vozila" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="putni_izvjestaji">
+        <PropertyRef Name="putni_izvjestaj_id" />
+      </Principal>
+      <Dependent Role="izvjestaji_kretanja_vozila">
+        <PropertyRef Name="putni_izvjestaj_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_nalozi_mjesta_to_nalozi">
+    <End Role="nalozi" Type="putni_naloziModel.nalozi" Multiplicity="0..1" />
+    <End Role="nalozi_mjesta" Type="putni_naloziModel.nalozi_mjesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nalozi">
+        <PropertyRef Name="nalog_id" />
+      </Principal>
+      <Dependent Role="nalozi_mjesta">
+        <PropertyRef Name="nalog_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_nalozi_to_vozila">
+    <End Role="vozila" Type="putni_naloziModel.vozila" Multiplicity="1" />
+    <End Role="nalozi" Type="putni_naloziModel.nalozi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vozila">
+        <PropertyRef Name="vozilo_id" />
+      </Principal>
+      <Dependent Role="nalozi">
+        <PropertyRef Name="vozilo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_nalozi_to_zaposlenici_1">
+    <End Role="zaposlenici" Type="putni_naloziModel.zaposlenici" Multiplicity="1" />
+    <End Role="nalozi" Type="putni_naloziModel.nalozi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenici">
+        <PropertyRef Name="zaposlenik_id" />
+      </Principal>
+      <Dependent Role="nalozi">
+        <PropertyRef Name="zaposlenik_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_nalozi_to_zaposlenici_2">
+    <End Role="zaposlenici" Type="putni_naloziModel.zaposlenici" Multiplicity="1" />
+    <End Role="nalozi" Type="putni_naloziModel.nalozi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenici">
+        <PropertyRef Name="zaposlenik_id" />
+      </Principal>
+      <Dependent Role="nalozi">
+        <PropertyRef Name="nalog_kreirao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_nalozi_to_zaposlenici_3">
+    <End Role="zaposlenici" Type="putni_naloziModel.zaposlenici" Multiplicity="1" />
+    <End Role="nalozi" Type="putni_naloziModel.nalozi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenici">
+        <PropertyRef Name="zaposlenik_id" />
+      </Principal>
+      <Dependent Role="nalozi">
+        <PropertyRef Name="zap_zad_izmjene" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_putni_izvjestaji_to_nalozi">
+    <End Role="nalozi" Type="putni_naloziModel.nalozi" Multiplicity="1" />
+    <End Role="putni_izvjestaji" Type="putni_naloziModel.putni_izvjestaji" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nalozi">
+        <PropertyRef Name="nalog_id" />
+      </Principal>
+      <Dependent Role="putni_izvjestaji">
+        <PropertyRef Name="nalog_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_putni_izvjestaji_to_zaposlenici">
+    <End Role="zaposlenici" Type="putni_naloziModel.zaposlenici" Multiplicity="1" />
+    <End Role="putni_izvjestaji" Type="putni_naloziModel.putni_izvjestaji" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenici">
+        <PropertyRef Name="zaposlenik_id" />
+      </Principal>
+      <Dependent Role="putni_izvjestaji">
+        <PropertyRef Name="zap_zad_izmjene" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_vozila_to_zaposlenici">
+    <End Role="zaposlenici" Type="putni_naloziModel.zaposlenici" Multiplicity="1" />
+    <End Role="vozila" Type="putni_naloziModel.vozila" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenici">
+        <PropertyRef Name="zaposlenik_id" />
+      </Principal>
+      <Dependent Role="vozila">
+        <PropertyRef Name="zap_zad_izmjene" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Ref_zaposlenici_to_zaposlenici">
+    <End Role="zaposlenici" Type="putni_naloziModel.zaposlenici" Multiplicity="0..1" />
+    <End Role="zaposlenici1" Type="putni_naloziModel.zaposlenici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zaposlenici">
+        <PropertyRef Name="zaposlenik_id" />
+      </Principal>
+      <Dependent Role="zaposlenici1">
+        <PropertyRef Name="zap_zad_izmjene" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

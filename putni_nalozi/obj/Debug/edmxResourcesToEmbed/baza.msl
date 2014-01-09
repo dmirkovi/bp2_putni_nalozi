@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="putni_naloziModelStoreContainer" CdmEntityContainer="putni_naloziEntities">
+    <EntitySetMapping Name="izvjestaj_racuni">
+      <EntityTypeMapping TypeName="putni_naloziModel.izvjestaj_racuni">
+        <MappingFragment StoreEntitySet="izvjestaj_racuni">
+          <ScalarProperty Name="izvjestaj_racun_id" ColumnName="izvjestaj_racun_id" />
+          <ScalarProperty Name="putni_izvjestaj_id" ColumnName="putni_izvjestaj_id" />
+          <ScalarProperty Name="tip_racuna" ColumnName="tip_racuna" />
+          <ScalarProperty Name="datum_vrijeme" ColumnName="datum_vrijeme" />
+          <ScalarProperty Name="racun_izdao" ColumnName="racun_izdao" />
+          <ScalarProperty Name="broj_racuna" ColumnName="broj_racuna" />
+          <ScalarProperty Name="iznos" ColumnName="iznos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="izvjestaji_kretanja_vozila">
+      <EntityTypeMapping TypeName="putni_naloziModel.izvjestaji_kretanja_vozila">
+        <MappingFragment StoreEntitySet="izvjestaji_kretanja_vozila">
+          <ScalarProperty Name="izvjestaj_kretanja_vozila_id" ColumnName="izvjestaj_kretanja_vozila_id" />
+          <ScalarProperty Name="putni_izvjestaj_id" ColumnName="putni_izvjestaj_id" />
+          <ScalarProperty Name="stanje_brojila" ColumnName="stanje_brojila" />
+          <ScalarProperty Name="mjesto" ColumnName="mjesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nalozi">
+      <EntityTypeMapping TypeName="putni_naloziModel.nalozi">
+        <MappingFragment StoreEntitySet="nalozi">
+          <ScalarProperty Name="nalog_id" ColumnName="nalog_id" />
+          <ScalarProperty Name="zaposlenik_id" ColumnName="zaposlenik_id" />
+          <ScalarProperty Name="vozilo_id" ColumnName="vozilo_id" />
+          <ScalarProperty Name="vrijeme_polaska" ColumnName="vrijeme_polaska" />
+          <ScalarProperty Name="vrijeme_dolaska" ColumnName="vrijeme_dolaska" />
+          <ScalarProperty Name="svrha" ColumnName="svrha" />
+          <ScalarProperty Name="trosak_puta" ColumnName="trosak_puta" />
+          <ScalarProperty Name="nalog_kreirao" ColumnName="nalog_kreirao" />
+          <ScalarProperty Name="datum_kreiranja" ColumnName="datum_kreiranja" />
+          <ScalarProperty Name="dat_zad_izmjene" ColumnName="dat_zad_izmjene" />
+          <ScalarProperty Name="zap_zad_izmjene" ColumnName="zap_zad_izmjene" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nalozi_mjesta">
+      <EntityTypeMapping TypeName="putni_naloziModel.nalozi_mjesta">
+        <MappingFragment StoreEntitySet="nalozi_mjesta">
+          <ScalarProperty Name="nalog_mjesta_id" ColumnName="nalog_mjesta_id" />
+          <ScalarProperty Name="nalog_id" ColumnName="nalog_id" />
+          <ScalarProperty Name="naziv_mjesta" ColumnName="naziv_mjesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="putni_izvjestaji">
+      <EntityTypeMapping TypeName="putni_naloziModel.putni_izvjestaji">
+        <MappingFragment StoreEntitySet="putni_izvjestaji">
+          <ScalarProperty Name="putni_izvjestaj_id" ColumnName="putni_izvjestaj_id" />
+          <ScalarProperty Name="nalog_id" ColumnName="nalog_id" />
+          <ScalarProperty Name="vrijeme_polaska" ColumnName="vrijeme_polaska" />
+          <ScalarProperty Name="vrijeme_dolaska" ColumnName="vrijeme_dolaska" />
+          <ScalarProperty Name="duljina_puta" ColumnName="duljina_puta" />
+          <ScalarProperty Name="izvjestaj_kreirao" ColumnName="izvjestaj_kreirao" />
+          <ScalarProperty Name="datum_kreiranja" ColumnName="datum_kreiranja" />
+          <ScalarProperty Name="dat_zad_izmjene" ColumnName="dat_zad_izmjene" />
+          <ScalarProperty Name="zap_zad_izmjene" ColumnName="zap_zad_izmjene" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vozila">
+      <EntityTypeMapping TypeName="putni_naloziModel.vozila">
+        <MappingFragment StoreEntitySet="vozila">
+          <ScalarProperty Name="vozilo_id" ColumnName="vozilo_id" />
+          <ScalarProperty Name="marka" ColumnName="marka" />
+          <ScalarProperty Name="broj_sasije" ColumnName="broj_sasije" />
+          <ScalarProperty Name="kategorija" ColumnName="kategorija" />
+          <ScalarProperty Name="nosivost" ColumnName="nosivost" />
+          <ScalarProperty Name="broj_sjedala" ColumnName="broj_sjedala" />
+          <ScalarProperty Name="reg_oznaka" ColumnName="reg_oznaka" />
+          <ScalarProperty Name="datum_reg" ColumnName="datum_reg" />
+          <ScalarProperty Name="dat_zad_izmjene" ColumnName="dat_zad_izmjene" />
+          <ScalarProperty Name="zap_zad_izmjene" ColumnName="zap_zad_izmjene" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zaposlenici">
+      <EntityTypeMapping TypeName="putni_naloziModel.zaposlenici">
+        <MappingFragment StoreEntitySet="zaposlenici">
+          <ScalarProperty Name="zaposlenik_id" ColumnName="zaposlenik_id" />
+          <ScalarProperty Name="prezime" ColumnName="prezime" />
+          <ScalarProperty Name="ime" ColumnName="ime" />
+          <ScalarProperty Name="kat_a" ColumnName="kat_a" />
+          <ScalarProperty Name="kat_b" ColumnName="kat_b" />
+          <ScalarProperty Name="kat_c" ColumnName="kat_c" />
+          <ScalarProperty Name="kat_d" ColumnName="kat_d" />
+          <ScalarProperty Name="kat_e" ColumnName="kat_e" />
+          <ScalarProperty Name="dat_zad_izmjene" ColumnName="dat_zad_izmjene" />
+          <ScalarProperty Name="zap_zad_izmjene" ColumnName="zap_zad_izmjene" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

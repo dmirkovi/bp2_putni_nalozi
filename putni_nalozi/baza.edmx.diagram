@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="70b3b57473ce4345a6acf470803b78e1" Name="Diagram1" ZoomLevel="92">
+        <EntityTypeShape EntityType="putni_naloziModel.izvjestaj_racuni" Width="1.5" PointX="9.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="putni_naloziModel.izvjestaji_kretanja_vozila" Width="1.5" PointX="9.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="putni_naloziModel.nalozi" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="putni_naloziModel.nalozi_mjesta" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="putni_naloziModel.putni_izvjestaji" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="putni_naloziModel.vozila" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="putni_naloziModel.zaposlenici" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="putni_naloziModel.Ref_izvjestaj_racuni_to_putni_izvjestaji" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_izvjestaji_kretanja_vozila_to_putni_izvjestaji" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_nalozi_mjesta_to_nalozi" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_nalozi_to_vozila" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_nalozi_to_zaposlenici_1" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_nalozi_to_zaposlenici_2" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_nalozi_to_zaposlenici_3" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_putni_izvjestaji_to_nalozi" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_putni_izvjestaji_to_zaposlenici" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_vozila_to_zaposlenici" ManuallyRouted="false" />
+        <AssociationConnector Association="putni_naloziModel.Ref_zaposlenici_to_zaposlenici" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
