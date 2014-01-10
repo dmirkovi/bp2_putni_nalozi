@@ -40,7 +40,7 @@ CREATE TABLE "nalozi_mjesta" (
 );
 
 CREATE TABLE "nalozi" (
-	"nalog_id" int NOT NULL,
+	"nalog_id" INT IDENTITY NOT NULL,
 	"zaposlenik_id" int NOT NULL,
 	"vozilo_id" int NOT NULL,
 	"vrijeme_polaska" datetime NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE "vozila" (
 	"nosivost" float NOT NULL,
 	"broj_sjedala" int NOT NULL,
 	"reg_oznaka" varchar(15) NOT NULL,
-	"datum_reg" int NOT NULL,
+	"datum_reg" datetime NOT NULL,
 	"dat_zad_izmjene" datetime NOT NULL,
 	"zap_zad_izmjene" int NOT NULL,
 	PRIMARY KEY("vozilo_id")

@@ -21,3 +21,6 @@ C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmZaposl
 C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.Properties.Resources.resources
 C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.csproj.GenerateResource.Cache
 C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmZaposleniciPregled.resources
+C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmVozilaUnos.resources
+C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmVozilaPregled.resources
+C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmNaloziUnos.resources

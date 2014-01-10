@@ -26,7 +26,7 @@ namespace putni_nalozi
         public double nosivost { get; set; }
         public int broj_sjedala { get; set; }
         public string reg_oznaka { get; set; }
-        public int datum_reg { get; set; }
+        public Nullable<System.DateTime> datum_reg { get; set; }
         public System.DateTime dat_zad_izmjene { get; set; }
         public int zap_zad_izmjene { get; set; }
     

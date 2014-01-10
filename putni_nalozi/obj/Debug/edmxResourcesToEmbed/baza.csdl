@@ -136,7 +136,7 @@
     <Property Name="nosivost" Type="Double" Nullable="false" />
     <Property Name="broj_sjedala" Type="Int32" Nullable="false" />
     <Property Name="reg_oznaka" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
-    <Property Name="datum_reg" Type="Int32" Nullable="false" />
+    <Property Name="datum_reg" Type="DateTime" />
     <Property Name="dat_zad_izmjene" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="zap_zad_izmjene" Type="Int32" Nullable="false" />
     <NavigationProperty Name="nalozi" Relationship="putni_naloziModel.Ref_nalozi_to_vozila" FromRole="vozila" ToRole="nalozi" />

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvPregledZaposlenika = new System.Windows.Forms.DataGridView();
-            this.zaposleniciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zaposlenikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,12 +39,17 @@
             this.katdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datzadizmjeneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zaposleniciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPregledZaposlenika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zaposleniciBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPregledZaposlenika
             // 
+            this.dgvPregledZaposlenika.AllowUserToAddRows = false;
+            this.dgvPregledZaposlenika.AllowUserToDeleteRows = false;
+            this.dgvPregledZaposlenika.AllowUserToResizeColumns = false;
+            this.dgvPregledZaposlenika.AllowUserToResizeRows = false;
             this.dgvPregledZaposlenika.AutoGenerateColumns = false;
             this.dgvPregledZaposlenika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPregledZaposlenika.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -62,12 +66,11 @@
             this.dgvPregledZaposlenika.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPregledZaposlenika.Location = new System.Drawing.Point(0, 0);
             this.dgvPregledZaposlenika.Name = "dgvPregledZaposlenika";
+            this.dgvPregledZaposlenika.RowHeadersVisible = false;
+            this.dgvPregledZaposlenika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPregledZaposlenika.Size = new System.Drawing.Size(615, 364);
             this.dgvPregledZaposlenika.TabIndex = 0;
-            // 
-            // zaposleniciBindingSource
-            // 
-            this.zaposleniciBindingSource.DataSource = typeof(putni_nalozi.zaposlenici);
+            this.dgvPregledZaposlenika.Click += new System.EventHandler(this.dgvPregledZaposlenika_Click);
             // 
             // zaposlenikidDataGridViewTextBoxColumn
             // 
@@ -122,6 +125,10 @@
             this.datzadizmjeneDataGridViewTextBoxColumn.DataPropertyName = "dat_zad_izmjene";
             this.datzadizmjeneDataGridViewTextBoxColumn.HeaderText = "dat_zad_izmjene";
             this.datzadizmjeneDataGridViewTextBoxColumn.Name = "datzadizmjeneDataGridViewTextBoxColumn";
+            // 
+            // zaposleniciBindingSource
+            // 
+            this.zaposleniciBindingSource.DataSource = typeof(putni_nalozi.zaposlenici);
             // 
             // frmZaposleniciPregled
             // 

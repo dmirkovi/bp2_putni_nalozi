@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="putni_naloziModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="putni_naloziModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="putni_naloziModelStoreContainer">
           <EntitySet Name="izvjestaj_racuni" EntityType="putni_naloziModel.Store.izvjestaj_racuni" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="izvjestaji_kretanja_vozila" EntityType="putni_naloziModel.Store.izvjestaji_kretanja_vozila" store:Type="Tables" Schema="dbo" />
@@ -128,7 +128,7 @@
           <Property Name="nosivost" Type="float" Nullable="false" />
           <Property Name="broj_sjedala" Type="int" Nullable="false" />
           <Property Name="reg_oznaka" Type="varchar" Nullable="false" MaxLength="15" />
-          <Property Name="datum_reg" Type="int" Nullable="false" />
+          <Property Name="datum_reg" Type="datetime" />
           <Property Name="dat_zad_izmjene" Type="datetime" Nullable="false" />
           <Property Name="zap_zad_izmjene" Type="int" Nullable="false" />
         </EntityType>
@@ -279,8 +279,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="putni_naloziModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -420,7 +419,7 @@
           <Property Name="nosivost" Type="Double" Nullable="false" />
           <Property Name="broj_sjedala" Type="Int32" Nullable="false" />
           <Property Name="reg_oznaka" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
-          <Property Name="datum_reg" Type="Int32" Nullable="false" />
+          <Property Name="datum_reg" Type="DateTime" />
           <Property Name="dat_zad_izmjene" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="zap_zad_izmjene" Type="Int32" Nullable="false" />
           <NavigationProperty Name="nalozi" Relationship="putni_naloziModel.Ref_nalozi_to_vozila" FromRole="vozila" ToRole="nalozi" />

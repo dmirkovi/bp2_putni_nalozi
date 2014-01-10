@@ -24,6 +24,16 @@ namespace putni_nalozi
                 PregledZaposlenika = new BindingList<zaposlenici>(db.zaposlenici.ToList());
             }
             zaposleniciBindingSource.DataSource = PregledZaposlenika;
+            
+        }
+
+        private void dgvPregledZaposlenika_Click(object sender, EventArgs e)
+        {
+            zaposlenici zap = (zaposlenici)zaposleniciBindingSource.Current;
+            frmZaposleniciUnos ZaposleniciUnos = new frmZaposleniciUnos(zap);
+            ZaposleniciUnos.MdiParent = this.MdiParent;
+            ZaposleniciUnos.Show();
+            this.Close();
         }
     }
 }

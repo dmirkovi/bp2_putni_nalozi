@@ -49,7 +49,7 @@
             this.tbPrezimeZaposlenika.Location = new System.Drawing.Point(143, 18);
             this.tbPrezimeZaposlenika.Name = "tbPrezimeZaposlenika";
             this.tbPrezimeZaposlenika.Size = new System.Drawing.Size(100, 20);
-            this.tbPrezimeZaposlenika.TabIndex = 0;
+            this.tbPrezimeZaposlenika.TabIndex = 1;
             // 
             // label1
             // 
@@ -85,7 +85,7 @@
             this.groupBox1.Location = new System.Drawing.Point(55, 17);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(302, 118);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Zaposlenik";
             // 
@@ -95,7 +95,7 @@
             this.cbKatA.Location = new System.Drawing.Point(80, 21);
             this.cbKatA.Name = "cbKatA";
             this.cbKatA.Size = new System.Drawing.Size(83, 17);
-            this.cbKatA.TabIndex = 5;
+            this.cbKatA.TabIndex = 3;
             this.cbKatA.Text = "Kategorija A";
             this.cbKatA.UseVisualStyleBackColor = true;
             // 
@@ -105,7 +105,7 @@
             this.cbKatB.Location = new System.Drawing.Point(80, 69);
             this.cbKatB.Name = "cbKatB";
             this.cbKatB.Size = new System.Drawing.Size(83, 17);
-            this.cbKatB.TabIndex = 9;
+            this.cbKatB.TabIndex = 4;
             this.cbKatB.Text = "Kategorija B";
             this.cbKatB.UseVisualStyleBackColor = true;
             // 
@@ -115,7 +115,7 @@
             this.cbKatC.Location = new System.Drawing.Point(80, 115);
             this.cbKatC.Name = "cbKatC";
             this.cbKatC.Size = new System.Drawing.Size(82, 17);
-            this.cbKatC.TabIndex = 11;
+            this.cbKatC.TabIndex = 5;
             this.cbKatC.Text = "kategorija C";
             this.cbKatC.UseVisualStyleBackColor = true;
             // 
@@ -125,7 +125,7 @@
             this.cbKatD.Location = new System.Drawing.Point(80, 161);
             this.cbKatD.Name = "cbKatD";
             this.cbKatD.Size = new System.Drawing.Size(84, 17);
-            this.cbKatD.TabIndex = 13;
+            this.cbKatD.TabIndex = 6;
             this.cbKatD.Text = "Kategorija D";
             this.cbKatD.UseVisualStyleBackColor = true;
             // 
@@ -135,7 +135,7 @@
             this.cbKatE.Location = new System.Drawing.Point(80, 207);
             this.cbKatE.Name = "cbKatE";
             this.cbKatE.Size = new System.Drawing.Size(83, 17);
-            this.cbKatE.TabIndex = 15;
+            this.cbKatE.TabIndex = 7;
             this.cbKatE.Text = "Kategorija E";
             this.cbKatE.UseVisualStyleBackColor = true;
             // 
@@ -144,7 +144,7 @@
             this.button1.Location = new System.Drawing.Point(55, 198);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(302, 61);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Spremi";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -159,7 +159,7 @@
             this.groupBox2.Location = new System.Drawing.Point(431, 17);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(248, 242);
-            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Posjeduje kategoriju";
             // 
@@ -173,7 +173,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmZaposleniciUnos";
             this.Text = "Unos zaposlenika";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -14,7 +14,7 @@ namespace putni_nalozi
     {
         public frmMain()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
@@ -26,6 +26,7 @@ namespace putni_nalozi
         {
             frmZaposleniciUnos ZaposleniciUnos = new frmZaposleniciUnos();
             ZaposleniciUnos.MdiParent = this;
+            ZaposleniciUnos.WindowState = FormWindowState.Maximized;
             ZaposleniciUnos.Show();
         }
 
@@ -33,7 +34,37 @@ namespace putni_nalozi
         {
             frmZaposleniciPregled ZaposleniciPregled = new frmZaposleniciPregled();
             ZaposleniciPregled.MdiParent = this;
+            ZaposleniciPregled.WindowState = FormWindowState.Maximized;
             ZaposleniciPregled.Show();
+        }
+
+        private void unosVozilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVozilaUnos VozilaUnos = new frmVozilaUnos();
+            VozilaUnos.MdiParent = this;
+            VozilaUnos.WindowState = FormWindowState.Maximized;
+            VozilaUnos.Show();
+        }
+
+        private void pregledVozilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVozilaPregled VozilaPregled = new frmVozilaPregled();
+            VozilaPregled.MdiParent = this;
+            VozilaPregled.WindowState = FormWindowState.Maximized;
+            VozilaPregled.Show();
+        }
+
+        private void dodajNalogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNaloziUnos NaloziUnos = new frmNaloziUnos();
+            NaloziUnos.MdiParent = this;
+            NaloziUnos.WindowState = FormWindowState.Maximized;
+            NaloziUnos.Show();
+        }
+
+        private void pregledNalogaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

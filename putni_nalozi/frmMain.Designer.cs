@@ -34,6 +34,12 @@
             this.zaposleniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unosZaposlenikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledZaposlenikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unosVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.naloziToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajNalogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledNalogaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +47,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.zaposleniciToolStripMenuItem});
+            this.zaposleniciToolStripMenuItem,
+            this.vozilaToolStripMenuItem,
+            this.naloziToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1030, 24);
@@ -59,7 +67,7 @@
             // izlazToolStripMenuItem
             // 
             this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.izlazToolStripMenuItem.Text = "Izlaz";
             this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
             // 
@@ -86,6 +94,52 @@
             this.pregledZaposlenikaToolStripMenuItem.Text = "Pregled zaposlenika";
             this.pregledZaposlenikaToolStripMenuItem.Click += new System.EventHandler(this.pregledZaposlenikaToolStripMenuItem_Click);
             // 
+            // vozilaToolStripMenuItem
+            // 
+            this.vozilaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.unosVozilaToolStripMenuItem,
+            this.pregledVozilaToolStripMenuItem});
+            this.vozilaToolStripMenuItem.Name = "vozilaToolStripMenuItem";
+            this.vozilaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.vozilaToolStripMenuItem.Text = "Vozila";
+            // 
+            // unosVozilaToolStripMenuItem
+            // 
+            this.unosVozilaToolStripMenuItem.Name = "unosVozilaToolStripMenuItem";
+            this.unosVozilaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.unosVozilaToolStripMenuItem.Text = "Unos vozila";
+            this.unosVozilaToolStripMenuItem.Click += new System.EventHandler(this.unosVozilaToolStripMenuItem_Click);
+            // 
+            // pregledVozilaToolStripMenuItem
+            // 
+            this.pregledVozilaToolStripMenuItem.Name = "pregledVozilaToolStripMenuItem";
+            this.pregledVozilaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.pregledVozilaToolStripMenuItem.Text = "Pregled vozila";
+            this.pregledVozilaToolStripMenuItem.Click += new System.EventHandler(this.pregledVozilaToolStripMenuItem_Click);
+            // 
+            // naloziToolStripMenuItem
+            // 
+            this.naloziToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dodajNalogToolStripMenuItem,
+            this.pregledNalogaToolStripMenuItem});
+            this.naloziToolStripMenuItem.Name = "naloziToolStripMenuItem";
+            this.naloziToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.naloziToolStripMenuItem.Text = "Nalozi";
+            // 
+            // dodajNalogToolStripMenuItem
+            // 
+            this.dodajNalogToolStripMenuItem.Name = "dodajNalogToolStripMenuItem";
+            this.dodajNalogToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.dodajNalogToolStripMenuItem.Text = "Dodaj nalog";
+            this.dodajNalogToolStripMenuItem.Click += new System.EventHandler(this.dodajNalogToolStripMenuItem_Click);
+            // 
+            // pregledNalogaToolStripMenuItem
+            // 
+            this.pregledNalogaToolStripMenuItem.Name = "pregledNalogaToolStripMenuItem";
+            this.pregledNalogaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.pregledNalogaToolStripMenuItem.Text = "Pregled naloga";
+            this.pregledNalogaToolStripMenuItem.Click += new System.EventHandler(this.pregledNalogaToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +150,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "Putni nalozi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -111,6 +166,12 @@
         private System.Windows.Forms.ToolStripMenuItem zaposleniciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unosZaposlenikaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledZaposlenikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vozilaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unosVozilaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledVozilaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem naloziToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajNalogToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledNalogaToolStripMenuItem;
     }
 }
 

@@ -123,7 +123,7 @@
     <Property Name="nosivost" Type="float" Nullable="false" />
     <Property Name="broj_sjedala" Type="int" Nullable="false" />
     <Property Name="reg_oznaka" Type="varchar" Nullable="false" MaxLength="15" />
-    <Property Name="datum_reg" Type="int" Nullable="false" />
+    <Property Name="datum_reg" Type="datetime" />
     <Property Name="dat_zad_izmjene" Type="datetime" Nullable="false" />
     <Property Name="zap_zad_izmjene" Type="int" Nullable="false" />
   </EntityType>

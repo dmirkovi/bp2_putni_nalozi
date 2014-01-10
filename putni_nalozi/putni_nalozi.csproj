@@ -66,6 +66,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>baza.edmx</DependentUpon>
     </Compile>
+    <Compile Include="frmNaloziUnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNaloziUnos.Designer.cs">
+      <DependentUpon>frmNaloziUnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVozilaPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVozilaPregled.Designer.cs">
+      <DependentUpon>frmVozilaPregled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVozilaUnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVozilaUnos.Designer.cs">
+      <DependentUpon>frmVozilaUnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +125,15 @@
     <Compile Include="zaposlenici.cs">
       <DependentUpon>baza.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmNaloziUnos.resx">
+      <DependentUpon>frmNaloziUnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVozilaPregled.resx">
+      <DependentUpon>frmVozilaPregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVozilaUnos.resx">
+      <DependentUpon>frmVozilaUnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +170,7 @@
       <LastGenOutput>baza.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\vozila.datasource" />
     <None Include="Properties\DataSources\zaposlenici.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
