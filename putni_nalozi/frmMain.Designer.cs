@@ -40,6 +40,9 @@
             this.naloziToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNalogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledNalogaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izvještajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.KreiranjeIzvještajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledIzvještajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +52,8 @@
             this.fileToolStripMenuItem,
             this.zaposleniciToolStripMenuItem,
             this.vozilaToolStripMenuItem,
-            this.naloziToolStripMenuItem});
+            this.naloziToolStripMenuItem,
+            this.izvještajToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1030, 24);
@@ -67,7 +71,7 @@
             // izlazToolStripMenuItem
             // 
             this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.izlazToolStripMenuItem.Text = "Izlaz";
             this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
             // 
@@ -140,6 +144,29 @@
             this.pregledNalogaToolStripMenuItem.Text = "Pregled naloga";
             this.pregledNalogaToolStripMenuItem.Click += new System.EventHandler(this.pregledNalogaToolStripMenuItem_Click);
             // 
+            // izvještajToolStripMenuItem
+            // 
+            this.izvještajToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.KreiranjeIzvještajaToolStripMenuItem,
+            this.pregledIzvještajaToolStripMenuItem});
+            this.izvještajToolStripMenuItem.Name = "izvještajToolStripMenuItem";
+            this.izvještajToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.izvještajToolStripMenuItem.Text = "Izvještaj";
+            // 
+            // KreiranjeIzvještajaToolStripMenuItem
+            // 
+            this.KreiranjeIzvještajaToolStripMenuItem.Name = "KreiranjeIzvještajaToolStripMenuItem";
+            this.KreiranjeIzvještajaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.KreiranjeIzvještajaToolStripMenuItem.Text = "Kreiranje izvještaja";
+            this.KreiranjeIzvještajaToolStripMenuItem.Click += new System.EventHandler(this.KreiranjeIzvještajaToolStripMenuItem_Click);
+            // 
+            // pregledIzvještajaToolStripMenuItem
+            // 
+            this.pregledIzvještajaToolStripMenuItem.Name = "pregledIzvještajaToolStripMenuItem";
+            this.pregledIzvještajaToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.pregledIzvještajaToolStripMenuItem.Text = "Pregled izvještaja";
+            this.pregledIzvještajaToolStripMenuItem.Click += new System.EventHandler(this.pregledIzvještajaToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +199,9 @@
         private System.Windows.Forms.ToolStripMenuItem naloziToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNalogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledNalogaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izvještajToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem KreiranjeIzvještajaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledIzvještajaToolStripMenuItem;
     }
 }
 

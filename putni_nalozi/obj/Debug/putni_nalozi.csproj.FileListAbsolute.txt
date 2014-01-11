@@ -24,3 +24,6 @@ C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmZaposl
 C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmVozilaUnos.resources
 C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmVozilaPregled.resources
 C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmNaloziUnos.resources
+C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmNaloziPregled.resources
+C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmIzvještajUnos.resources
+C:\Users\dmirkovi\Documents\GitHub\putni_nalozi\obj\Debug\putni_nalozi.frmPregled.resources

@@ -28,7 +28,8 @@ namespace putni_nalozi
                 tbRegistracijskaOznaka.Text = vozila_za_uredivanje.reg_oznaka;
 
             }
-            tbMarkaVozila.Focus();
+            dtpDatumRegistracije.Format = DateTimePickerFormat.Custom;
+            dtpDatumRegistracije.CustomFormat = "dd MM yyyy";
         }
 
         private void btnVozilaSpremi_Click(object sender, EventArgs e)

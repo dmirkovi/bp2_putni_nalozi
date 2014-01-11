@@ -51,20 +51,21 @@
             this.cbVozila = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.gbPlaniranoVrijemePuta = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.dtpDolaska = new System.Windows.Forms.DateTimePicker();
+            this.dtpPolaska = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tbSvrha = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tbTrosak = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMjesta = new System.Windows.Forms.DataGridView();
             this.mjesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btNalogSpermi = new System.Windows.Forms.Button();
             this.gpIzvrsitelj.SuspendLayout();
             this.gbVozila.SuspendLayout();
             this.gbPlaniranoVrijemePuta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMjesta)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -268,6 +269,7 @@
             this.cbVozila.Name = "cbVozila";
             this.cbVozila.Size = new System.Drawing.Size(99, 21);
             this.cbVozila.TabIndex = 1;
+            this.cbVozila.SelectedIndexChanged += new System.EventHandler(this.cbVozila_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -280,8 +282,8 @@
             // 
             // gbPlaniranoVrijemePuta
             // 
-            this.gbPlaniranoVrijemePuta.Controls.Add(this.dateTimePicker2);
-            this.gbPlaniranoVrijemePuta.Controls.Add(this.dateTimePicker1);
+            this.gbPlaniranoVrijemePuta.Controls.Add(this.dtpDolaska);
+            this.gbPlaniranoVrijemePuta.Controls.Add(this.dtpPolaska);
             this.gbPlaniranoVrijemePuta.Controls.Add(this.label12);
             this.gbPlaniranoVrijemePuta.Controls.Add(this.label11);
             this.gbPlaniranoVrijemePuta.Location = new System.Drawing.Point(348, 17);
@@ -291,14 +293,19 @@
             this.gbPlaniranoVrijemePuta.TabStop = false;
             this.gbPlaniranoVrijemePuta.Text = "Planirano vrijeme putovanja";
             // 
-            // label11
+            // dtpDolaska
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(35, 41);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Vrijeme polaska:";
+            this.dtpDolaska.Location = new System.Drawing.Point(125, 70);
+            this.dtpDolaska.Name = "dtpDolaska";
+            this.dtpDolaska.Size = new System.Drawing.Size(128, 20);
+            this.dtpDolaska.TabIndex = 2;
+            // 
+            // dtpPolaska
+            // 
+            this.dtpPolaska.Location = new System.Drawing.Point(125, 35);
+            this.dtpPolaska.Name = "dtpPolaska";
+            this.dtpPolaska.Size = new System.Drawing.Size(128, 20);
+            this.dtpPolaska.TabIndex = 1;
             // 
             // label12
             // 
@@ -309,19 +316,14 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Vrijeme dolaska:";
             // 
-            // dateTimePicker1
+            // label11
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(125, 35);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 20);
-            this.dateTimePicker1.TabIndex = 1;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(125, 70);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(128, 20);
-            this.dateTimePicker2.TabIndex = 2;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(35, 41);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Vrijeme polaska:";
             // 
             // label13
             // 
@@ -356,15 +358,15 @@
             this.tbTrosak.Size = new System.Drawing.Size(121, 20);
             this.tbTrosak.TabIndex = 5;
             // 
-            // dataGridView1
+            // dgvMjesta
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMjesta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMjesta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mjesta});
-            this.dataGridView1.Location = new System.Drawing.Point(448, 401);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(235, 109);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvMjesta.Location = new System.Drawing.Point(448, 401);
+            this.dgvMjesta.Name = "dgvMjesta";
+            this.dgvMjesta.Size = new System.Drawing.Size(235, 109);
+            this.dgvMjesta.TabIndex = 7;
             // 
             // mjesta
             // 
@@ -372,12 +374,23 @@
             this.mjesta.Name = "mjesta";
             this.mjesta.Width = 200;
             // 
+            // btNalogSpermi
+            // 
+            this.btNalogSpermi.Location = new System.Drawing.Point(61, 468);
+            this.btNalogSpermi.Name = "btNalogSpermi";
+            this.btNalogSpermi.Size = new System.Drawing.Size(297, 41);
+            this.btNalogSpermi.TabIndex = 8;
+            this.btNalogSpermi.Text = "Spremi";
+            this.btNalogSpermi.UseVisualStyleBackColor = true;
+            this.btNalogSpermi.Click += new System.EventHandler(this.btNalogSpermi_Click);
+            // 
             // frmNaloziUnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 553);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btNalogSpermi);
+            this.Controls.Add(this.dgvMjesta);
             this.Controls.Add(this.tbTrosak);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tbSvrha);
@@ -394,7 +407,7 @@
             this.gbVozila.PerformLayout();
             this.gbPlaniranoVrijemePuta.ResumeLayout(false);
             this.gbPlaniranoVrijemePuta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMjesta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,15 +438,16 @@
         private System.Windows.Forms.ComboBox cbVozila;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox gbPlaniranoVrijemePuta;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpPolaska;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpDolaska;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbSvrha;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tbTrosak;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMjesta;
         private System.Windows.Forms.DataGridViewTextBoxColumn mjesta;
+        private System.Windows.Forms.Button btNalogSpermi;
     }
 }

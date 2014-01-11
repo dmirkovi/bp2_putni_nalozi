@@ -78,7 +78,7 @@
     <Key>
       <PropertyRef Name="nalog_id" />
     </Key>
-    <Property Name="nalog_id" Type="int" Nullable="false" />
+    <Property Name="nalog_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="zaposlenik_id" Type="int" Nullable="false" />
     <Property Name="vozilo_id" Type="int" Nullable="false" />
     <Property Name="vrijeme_polaska" Type="datetime" Nullable="false" />

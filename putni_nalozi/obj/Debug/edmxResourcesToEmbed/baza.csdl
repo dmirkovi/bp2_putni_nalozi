@@ -80,7 +80,7 @@
     <Key>
       <PropertyRef Name="nalog_id" />
     </Key>
-    <Property Name="nalog_id" Type="Int32" Nullable="false" />
+    <Property Name="nalog_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="zaposlenik_id" Type="Int32" Nullable="false" />
     <Property Name="vozilo_id" Type="Int32" Nullable="false" />
     <Property Name="vrijeme_polaska" Type="DateTime" Nullable="false" Precision="3" />

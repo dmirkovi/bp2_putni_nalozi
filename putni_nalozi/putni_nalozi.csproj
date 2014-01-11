@@ -66,11 +66,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>baza.edmx</DependentUpon>
     </Compile>
+    <Compile Include="frmIzvještajUnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzvještajUnos.Designer.cs">
+      <DependentUpon>frmIzvještajUnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNaloziPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNaloziPregled.Designer.cs">
+      <DependentUpon>frmNaloziPregled.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNaloziUnos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNaloziUnos.Designer.cs">
       <DependentUpon>frmNaloziUnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPregled.Designer.cs">
+      <DependentUpon>frmPregled.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVozilaPregled.cs">
       <SubType>Form</SubType>
@@ -125,8 +143,17 @@
     <Compile Include="zaposlenici.cs">
       <DependentUpon>baza.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmIzvještajUnos.resx">
+      <DependentUpon>frmIzvještajUnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNaloziPregled.resx">
+      <DependentUpon>frmNaloziPregled.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNaloziUnos.resx">
       <DependentUpon>frmNaloziUnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPregled.resx">
+      <DependentUpon>frmPregled.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVozilaPregled.resx">
       <DependentUpon>frmVozilaPregled.cs</DependentUpon>
@@ -170,6 +197,8 @@
       <LastGenOutput>baza.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\nalozi.datasource" />
+    <None Include="Properties\DataSources\putni_izvjestaji.datasource" />
     <None Include="Properties\DataSources\vozila.datasource" />
     <None Include="Properties\DataSources\zaposlenici.datasource" />
     <None Include="Properties\Settings.settings">

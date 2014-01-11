@@ -64,7 +64,26 @@ namespace putni_nalozi
 
         private void pregledNalogaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmNaloziPregled NaloziPregled = new frmNaloziPregled();
+            NaloziPregled.MdiParent = this;
+            NaloziPregled.WindowState = FormWindowState.Maximized;
+            NaloziPregled.Show();
+        }
 
+        private void KreiranjeIzvještajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIzvještajUnos IzvještajUnos = new frmIzvještajUnos();
+            IzvještajUnos.MdiParent = this;
+            IzvještajUnos.WindowState = FormWindowState.Maximized;
+            IzvještajUnos.Show();
+        }
+
+        private void pregledIzvještajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPregled ir = new frmPregled();
+            ir.MdiParent = this;
+            ir.WindowState = FormWindowState.Maximized;
+            ir.Show();
         }
     }
 }
